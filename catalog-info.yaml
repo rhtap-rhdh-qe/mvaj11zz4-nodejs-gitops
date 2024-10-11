@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mvaj11zz4-nodejs-gitops
+  description: This is GitOps manifest for mvaj11zz4-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: mvaj11zz4-nodejs
+    janus-idp.io/tekton: mvaj11zz4-nodejs
+    backstage.io/kubernetes-id: mvaj11zz4-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:mvaj11zz4-nodejs
